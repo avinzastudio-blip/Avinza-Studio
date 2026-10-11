@@ -543,3 +543,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+// Limited Time Offer Popup
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const popup = document.getElementById("offerPopup");
+  const closeButton = document.getElementById("closeOffer");
+
+  if (!popup || !closeButton) {
+    return;
+  }
+
+  setTimeout(function () {
+    popup.classList.add("show-offer");
+  }, 800);
+
+  closeButton.addEventListener("click", function () {
+    popup.classList.remove("show-offer");
+  });
+
+  popup.addEventListener("click", function (event) {
+    if (event.target === popup) {
+      popup.classList.remove("show-offer");
+    }
+  });
+
+});

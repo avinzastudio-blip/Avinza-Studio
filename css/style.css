@@ -1893,3 +1893,98 @@ main {
     font-size: 10px !important;
   }
 }
+/* Limited Time Offer Popup */
+
+.offer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(20, 15, 25, 0.65);
+  backdrop-filter: blur(8px);
+}
+
+.offer-overlay.show-offer {
+  display: flex;
+}
+
+.offer-popup {
+  position: relative;
+  width: min(100%, 480px);
+  padding: 45px 30px;
+  text-align: center;
+  background: #fffaf5;
+  border-radius: 28px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+}
+
+.offer-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  border: 0;
+  background: transparent;
+  color: #55505d;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.offer-badge {
+  display: block;
+  margin-bottom: 18px;
+  color: #d77fa1;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.offer-popup h2 {
+  margin: 0 0 18px;
+  color: #27232c;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.offer-popup p {
+  margin: 0 auto 24px;
+  max-width: 360px;
+  color: #68616d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.offer-button {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 30px;
+  background: #d77fa1;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.offer-button:hover {
+  background: #b95f82;
+  transform: translateY(-2px);
+}
+
+.offer-popup small {
+  display: block;
+  margin-top: 17px;
+  color: #918894;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .offer-popup {
+    padding: 40px 22px;
+  }
+
+  .offer-popup h2 {
+    font-size: 27px;
+  }
+}
